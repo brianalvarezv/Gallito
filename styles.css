@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Akshar:wght@300;400&family=Cairo:wght@200;600&family=Fjalla+One&family=Indie+Flower&family=Macondo&family=Square+Peg&family=Ubuntu:wght@300&display=swap');
+* {
+  text-align: center;
+  box-sizing: border-box;
+}
+
+body {
+  background: Black;
+  color: rgb(255, 81, 0);
+  font-family: 'Abel', sans-serif;
+  animation: all .7s;
+  font-weight: bold;
+  background-image: url("circulos.svg");
+  background-size: cover;
+}
+
+.contenedor {
+  margin: 10%;
+  padding: 10px;
+  background:  rgba(30, 31, 62, 0.626);
+  border-radius: 10px;
+}
+
+.t {
+  font-size: 3em;
+}
+
+.timeis {
+  width: 100%;
+  padding: 10px;
+  font-size: 4em;
+}
+
+#alarmaLista {
+  font-size: 1.5em;
+  color: rgb(255, 52, 86);
+}
+
+.desperta {
+  position: relative;
+  top: 20px;
+  font-size: 2em;
+}
+
+#botones {
+  margin-top: 1rem;
+  
+}
+
+button {
+  margin: 10px;
+  padding: 6px 10px;
+  background: rgb(255, 52, 86);
+  border: solid 1px rgb(255, 52, 86);
+  font-weight: bold;
+  border-radius: 5px;
+  box-shadow: 0px 0px 1px white;
+  color: rgba(30, 31, 62);
+  font-weight: 600;
+  font-size: 0.5em;
+}
+
+button:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 5px rgb(165, 111, 219);
+  transform: scale(1.05);
+}
+
+.obs {
+  position:relative;
+  top: 150px;
+  color: white;
+}
+
+input {
+  color:rgb(255, 52, 86);
+  background-color: rgba(30, 31, 62, 0.626);
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 0.8em;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+
+}
+
+input[type=number]:focus{
+  outline:none;
+}
+input[type=number]::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+/* Changing sizes.... */
+
+@media (max-width:500px) {
+  * {
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #botones {
+    flex-direction: row;
+    align-self: center;
+    margin-top: 0px;
+  }
+
+  #hora {
+    width: 10vh;
+    height: 5vh;
+    align-self: center;
+  }
+  #minuto {
+    width: 10vh;
+    height: 5vh;
+    align-self: center;
+  }
+
+  .desperta {
+    row-gap: 1px;
+  }
+
+  button {
+    width: fit-content;
+    align-self: center;
+  }
+}
+
+@media (max-width:360px) {
+  * {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+  }
+  .contenedor {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width:200px) {
+  * {
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .contenedor {
+    font-size: 0.5rem;
+  }
+}
+
+@media (max-width:120px) {
+  .contenedor {
+    display: none;
+  }
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+    
+
+<div class="contenedor">
+    <div class="t">Hora:</div>
+    <div class="timeis" id="tm"></div>
+    <div id="alarmaLista"></div>
+</div>
+
+<div class="desperta">
+    DESPERTADOR:<br/><br/>hora: <input id="hora" type="number" min="00" max="23" value="00">
+     minuto: <input type="number" id="minuto" min="00" max="59" value="00">
+     <br/>
+    <div id="botones">
+        <button id="OK">OK!</button>
+        <button id="stop">Stop</button>
+    </div>
+</div>
+  <audio id="musical" src="https://archive.org/download/CockCrowingInJakarta/CockCrowingInJakarta.ogg"></audio>
+  
+
+  <script src="index.js"></script>
+</body>
+</html>
