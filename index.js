@@ -3,8 +3,7 @@ let btnOK = document.getElementById('OK');
 let clickOK = false; 
 let btnSTOP = document.getElementById('stop');
 let inputTag = document.getElementsByTagName('input');
-
-
+let alarmaLista = document.getElementById('alarmaLista');
 // ACÁ QUIERO METER UN LISTENER PARA QUE LA ALARMA SE ACTIVE
 // SÓLO EN EL CASO DE QUE HAYA TOCADO EL BOTON OK
 // btnOK.addEventListener('click',reloj(),{
@@ -12,14 +11,12 @@ let inputTag = document.getElementsByTagName('input');
 // })
 
 btnOK.onclick = function(){
-  let alarmaLista = document.getElementById('alarmaLista');
   alarmaLista.innerHTML = "La alarma está activada";
  clickOK=true; 
   noPress();
 }
 
 btnSTOP.onclick = function(){
-  let alarmaLista = document.getElementById('alarmaLista');
   alarmaLista.innerHTML = ""
   if (!gallito.paused) { 
     gallito.pause();
@@ -46,8 +43,9 @@ function reloj() {
   var minuto = hoy.getMinutes();
   var segundo = hoy.getSeconds();
   var horaD = parseInt(document.getElementById("hora").value);
-  var minutoD = parseInt(document.getElementById("minuto").value); 
-
+  var minutoD = parseInt(document.getElementById("minuto").value);
+  var tm = document.getElementById("tm");
+  tm.innerHTML = "00:00:00";
   
   if (hora < 10) {
     hora = "0" + hora
@@ -65,7 +63,7 @@ function reloj() {
   gallito.loop = true;
     };
 
-var tm = document.getElementById("tm");
+
 tm.innerHTML = (hora + ":" + minuto + ":" + segundo);    
 
   };
